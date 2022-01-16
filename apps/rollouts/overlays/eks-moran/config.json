@@ -1,0 +1,1 @@
+{"appName":"rollouts","userGivenName":"rollouts","destNamespace":"eks-moran","destServer":"https://kubernetes.default.svc","srcPath":"apps/rollouts/overlays/eks-moran","srcRepoURL":"https://github.com/mgoldboi/test.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"}}
