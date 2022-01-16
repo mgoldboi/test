@@ -1,0 +1,46 @@
+apiVersion: v1
+data:
+  base-url: https://g.codefresh.io
+  runtime: |
+    apiVersion: codefresh.io/v1alpha1
+    kind: Runtime
+    metadata:
+      creationTimestamp: null
+      name: eks-moran
+      namespace: eks-moran
+    spec:
+      bootstrapSpecifier: github.com/codefresh-io/cli-v2/manifests/argo-cd
+      cluster: https://9EA1DEDD86FE5A4490FCBC30884E1E2D.sk1.us-east-1.eks.amazonaws.com
+      components:
+      - name: events
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-events?ref=v0.0.187
+        wait: true
+      - name: rollouts
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-rollouts?ref=v0.0.187
+        wait: false
+      - name: workflows
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-workflows?ref=v0.0.187
+        wait: false
+      - name: argocd-agent
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/argo-agent?ref=v0.0.187
+        wait: false
+      - name: app-proxy
+        type: kustomize
+        url: github.com/codefresh-io/cli-v2/manifests/app-proxy?ref=v0.0.187
+        wait: false
+      defVersion: 1.0.0
+      ingressHost: a9e26cfe452024dc08f84f4f8f4b3568-f4bcfa0a526716ec.elb.us-east-1.amazonaws.com
+      repo: https://github.com/mgoldboi/test.git
+      version: 0.0.187
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/managed-by: codefresh
+    codefresh.io/entity: runtimeDef
+  name: codefresh-cm
+  namespace: eks-moran
