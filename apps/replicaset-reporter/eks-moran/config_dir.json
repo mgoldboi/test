@@ -1,0 +1,1 @@
+{"appName":"replicaset-reporter","userGivenName":"replicaset-reporter","destNamespace":"eks-moran","destServer":"https://kubernetes.default.svc","srcPath":"apps/replicaset-reporter/eks-moran/resources","srcRepoURL":"https://github.com/mgoldboi/test.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"component"},"exclude":"","include":""}
