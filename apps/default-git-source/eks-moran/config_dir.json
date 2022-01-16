@@ -1,0 +1,1 @@
+{"appName":"default-git-source","userGivenName":"default-git-source","destNamespace":"eks-moran","destServer":"https://kubernetes.default.svc","srcPath":"resources_eks-moran","srcRepoURL":"https://github.com/mgoldboi/test_git-source.git","srcTargetRevision":"","labels":{"codefresh_io_entity":"git-source"},"exclude":"","include":""}
